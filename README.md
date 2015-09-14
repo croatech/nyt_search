@@ -1,8 +1,7 @@
 # NytSearch
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nyt_search`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A ruby wrapper for the [Artcle Search API v2 - The New York Times](http://developer.nytimes.com/docs/read/article_search_api_v2)
+Get your API key [here](http://developer.nytimes.com/apps/mykeys).
 
 ## Installation
 
@@ -20,9 +19,15 @@ Or install it yourself as:
 
     $ gem install nyt_search
 
+## Configuration
+
+`NytSearch::Api.set_config("your_api_key")`
+
 ## Usage
 
-TODO: Write usage instructions here
+```
+@search = NytSearch::Search.by_word("obama")
+```
 
 ## Development
 

@@ -1,6 +1,6 @@
 # NytSearch
 
-A ruby wrapper for the [Artcle Search API v2 - The New York Times](http://developer.nytimes.com/docs/read/article_search_api_v2)
+A ruby wrapper for the [Article Search API v2 - The New York Times](http://developer.nytimes.com/docs/read/article_search_api_v2)
 Get your API key [here](http://developer.nytimes.com/apps/mykeys).
 
 ## Installation
@@ -23,10 +23,13 @@ Or install it yourself as:
 
 `NytSearch::Api.set_config("your_api_key")`
 
+If rails in *config/environments/*
+`NytSearch::Api.set_config("your_api_key")`
+
 ## Usage
 
 ```
-@search = NytSearch::Search.by_word("obama")
+@search = NytSearch::Search.query("obama")['response']['docs']
 ```
 
 ## Development

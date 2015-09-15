@@ -1,6 +1,7 @@
 module NytSearch
   class Api
     include HTTParty
+    default_params sort: "newest"
 
     def self.config
       @@config ||= {}

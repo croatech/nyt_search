@@ -1,6 +1,7 @@
 # NytSearch
 
 A ruby wrapper for the [Article Search API v2 - The New York Times](http://developer.nytimes.com/docs/read/article_search_api_v2)
+
 Get your API key [here](http://developer.nytimes.com/apps/mykeys).
 
 ## Installation
@@ -30,14 +31,10 @@ If rails in *config/environments/*
 ## Usage
 
 ```
-@search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2, begin_date: 19660806)['response']['docs']
+@search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)['response']['docs']
 ```
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Available options: `query, sort(newes, oldest), page, begin_date(YYYYMMDD), end_date(YYYYMMDD)`
 
 ## Contributing
 

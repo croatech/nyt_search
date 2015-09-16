@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["croaton6@gmail.com"]
 
   spec.summary       = "Summary"
-  spec.description   = "Description"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = "A Ruby wrapper for the NYTimes Article Search API"
+  spec.homepage      = "https://github.com/Frylock13/nyt_search"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or

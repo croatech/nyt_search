@@ -6,7 +6,7 @@ module NytSearch
       url += "&sort=#{options[:sort]}" if options[:sort]
       url += "&begin_date=#{options[:begin_date]}" if options[:begin_date]
       url += "&end_date=#{options[:end_date]}" if options[:end_date]
-      NytSearch::Api.get_json(url)
+      NytSearch::Api.get_json(url)['response']['docs']
     end
   end
 end

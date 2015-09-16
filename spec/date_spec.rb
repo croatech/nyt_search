@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Nyt Search Date" do
   before :each do
     # 06 August 1966 - 21 December 2012
-    @search = NytSearch::Article.search(query: "USA", begin_date: 19671022, end_date: 20121221)['response']['docs']
+    @search = NytSearch::Article.search(query: "USA", begin_date: 19671022, end_date: 20121221)
   end
 
   it 'checks count of json array' do

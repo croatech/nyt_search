@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Nyt Search Custom" do
   before :each do
-    @search = NytSearch::Article.search(query: "USA")['response']['docs'] 
+    @search = NytSearch::Article.search(query: "USA")
   end
 
   it 'checks count of json array' do

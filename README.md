@@ -24,9 +24,7 @@ Or install it yourself as:
 
 `NytSearch::Api.key("your_api_key")`
 
-If rails in *config/environments/*
-
-`NytSearch::Api.key("your_api_key")`
+If rails, set it in *config/environments/*
 
 ## Usage
 
@@ -34,7 +32,15 @@ If rails in *config/environments/*
 @search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)['response']['docs']
 ```
 
-Available options: `query, sort(newes, oldest), page, begin_date(YYYYMMDD), end_date(YYYYMMDD)`
+Available options: [
+                    ```
+                    query, 
+                    sort(newest, oldest),
+                    page, 
+                    begin_date(YYYYMMDD), 
+                    end_date(YYYYMMDD)
+                    ```
+                    ]
 
 ## Contributing
 

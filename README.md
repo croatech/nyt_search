@@ -21,10 +21,10 @@ Or install it yourself as:
 
 ## Configuration
 
-`NytSearch::Api.set_config("your_api_key")`
+`NytSearch::Api.key("your_api_key")`
 
 If rails in *config/environments/*
-`NytSearch::Api.set_config("your_api_key")`
+`NytSearch::Api.key("your_api_key")`
 
 ## Usage
 

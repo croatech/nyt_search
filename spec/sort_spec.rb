@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "Nyt Search Sort" do
   before :each do
-    @oldest = NytSearch::Search.query(query: "USA", sort: "oldest")['response']['docs']
-    @newest = NytSearch::Search.query(query: "USA", sort: "newest")['response']['docs']
+    @oldest = NytSearch::Article.search(query: "USA", sort: "oldest")['response']['docs']
+    @newest = NytSearch::Article.search(query: "USA", sort: "newest")['response']['docs']
   end
 
   it 'checks count of json array with sort' do

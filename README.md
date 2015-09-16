@@ -24,12 +24,13 @@ Or install it yourself as:
 `NytSearch::Api.key("your_api_key")`
 
 If rails in *config/environments/*
+
 `NytSearch::Api.key("your_api_key")`
 
 ## Usage
 
 ```
-@search = NytSearch::Search.query("obama")['response']['docs']
+@search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2, begin_date: 19660806)['response']['docs']
 ```
 
 ## Development

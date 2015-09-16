@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Nyt Search Sorting" do
+describe "Nyt Search Sort" do
   before :each do
     @oldest = NytSearch::Search.query(query: "USA", sort: "oldest")['response']['docs']
     @newest = NytSearch::Search.query(query: "USA", sort: "newest")['response']['docs']
@@ -15,8 +15,8 @@ describe "Nyt Search Sorting" do
   end
 
   it 'is comparing public dates' do
-    @oldest = @oldest[0]['pub_date'].split("T")[0].split("-").reduce(:+)
-    @newest = @newest[0]['pub_date'].split("T")[0].split("-").reduce(:+)
+    @oldest = perform_date(@oldest[0]['pub_date'])
+    @newest = perform_date(@newest[0]['pub_date'])
     expect(@newest).to be > @oldest
   end
 end

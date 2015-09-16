@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Nyt Search Pagination" do
+describe "Nyt Search Page" do
   before :each do
     @search = NytSearch::Search.query(query: "USA", page: 1)['response']['docs'] 
   end

@@ -9,7 +9,7 @@ Get your API key [here](http://developer.nytimes.com/apps/mykeys).
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nyt_search'
+gem 'nyt_search', :git => 'https://github.com/Frylock13/nyt_search.git'
 ```
 
 And then execute:
@@ -24,9 +24,7 @@ Or install it yourself as:
 
 `NytSearch::Api.key("your_api_key")`
 
-If rails in *config/environments/*
-
-`NytSearch::Api.key("your_api_key")`
+If rails, set it in *config/environments/*
 
 ## Usage
 
@@ -34,11 +32,19 @@ If rails in *config/environments/*
 @search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)['response']['docs']
 ```
 
-Available options: `query, sort(newes, oldest), page, begin_date(YYYYMMDD), end_date(YYYYMMDD)`
+Available options: [
+                    ```
+                    query, 
+                    sort(newest, oldest),
+                    page, 
+                    begin_date(YYYYMMDD), 
+                    end_date(YYYYMMDD)
+                    ```
+                    ]
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/nyt_search. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Frylock13/nyt_search. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

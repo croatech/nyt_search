@@ -29,7 +29,7 @@ If rails, set it in *config/environments/*
 ## Usage
 
 ```
-@search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)['response']['docs']
+@search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)
 ```
 
 *Available options*: [

@@ -6,7 +6,7 @@ describe "Nyt Search Date" do
     @search = NytSearch::Article.search(query: "USA", begin_date: 19671022, end_date: 20121221)
   end
 
-  it 'checks count of json array' do
+  it 'checks count of json hash' do
     expect(@search.count).to eq(10)
   end
 

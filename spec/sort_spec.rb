@@ -6,11 +6,11 @@ describe "Nyt Search Sort" do
     @newest = NytSearch::Article.search(query: "USA", sort: "newest")
   end
 
-  it 'checks count of json array with sort' do
+  it 'checks count of json hash with sort' do
     expect(@oldest.count).to eq(10)
   end
 
-  it 'is comparing json arrays with different sort' do
+  it 'is comparing json hashes with different sort' do
     expect(@oldest).not_to eq(@newest)
   end
 

@@ -7,9 +7,9 @@ module NytSearch
       url += "&begin_date=#{options[:begin_date]}" if options[:begin_date]
       url += "&end_date=#{options[:end_date]}" if options[:end_date]
 
-      if options[:only]
-        @options = options[:only].delete(' ')
-        url += "&fl=#{@options}"
+      if options[:fields]
+        fields = options[:fields].delete(' ')
+        url += "&fl=#{fields}"
       end
 
       NytSearch::Api.get_json(url)['response']['docs']

@@ -32,53 +32,35 @@ If rails, set it in *config/environments/*
 @search = NytSearch::Article.search(query: "obama", sort: "newest", page: 2)
 ```
 
-*Available options*: [
-                    ```
-                    query, 
-                    sort(newest, oldest),
-                    page, 
-                    begin_date(YYYYMMDD), 
-                    end_date(YYYYMMDD),
-                    only("headline,web_url")
-                    ```
-                    ]
-
-*Limits the fields returned in your search results. By default (unless you include an only list in your request), the following fields are returned: *:
-
+**Available options**:
+```
+query
+sort(newest, oldest)
+page
+begin_date(YYYYMMDD)
+end_date(YYYYMMDD)
+only("headline,web_url") #hash will have only this fields
 ```
 
+**Limits the fields returned in your search results. By default (unless you include an "only" list in your request), the following fields are returned**:
+
+```
 web_url
-
 snippet
-
 lead_paragraph
-
 abstract
-
 print_page
-
 blog
-
 source
-
 multimedia
-
 headline
-
 keywords
-
 pub_date
-
 document_type
-
 news_desk
-
 byline
-
 type_of_material
-
 _id
-
 word_count
 ```
 

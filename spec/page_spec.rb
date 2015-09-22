@@ -9,7 +9,7 @@ describe "Nyt Search Page" do
     expect(@search.count).to eq(10)
   end
 
-  it 'is comparing json hashes on different pages' do
+  it 'compares json hashes on different pages' do
     @search_on_page = NytSearch::Article.search(query: "USA", page: 2)
     expect(@search).not_to eq(@search_on_page) # articles on 1 and 2 pages
   end

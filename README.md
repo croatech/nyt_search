@@ -9,7 +9,7 @@ Get your API key [here](http://developer.nytimes.com/apps/mykeys).
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nyt_search', :git => 'https://github.com/Frylock13/nyt_search.git'
+gem 'nyt_search', git: 'https://github.com/Frylock13/nyt_search.git'
 ```
 
 And then execute:
